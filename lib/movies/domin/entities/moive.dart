@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class Moive extends Equatable {
+class Movie extends Equatable {
   final int id;
   final String title;
   final String backdropPath;
@@ -9,7 +9,7 @@ class Moive extends Equatable {
   final double voteAverage;
   final double releaseDate;
 
-  const Moive(
+  const Movie(
       {required this.id,
       required this.title,
       required this.backdropPath,

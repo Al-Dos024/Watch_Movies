@@ -1,6 +1,6 @@
 import 'package:watch_movies/movies/domin/entities/moive.dart';
 
-class MovieModel extends Moive {
+class MovieModel extends Movie {
   const MovieModel({
     required super.id,
     required super.title,

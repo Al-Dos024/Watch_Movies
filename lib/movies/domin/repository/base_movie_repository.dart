@@ -1,9 +1,11 @@
+import 'package:dartz/dartz.dart';
+import 'package:watch_movies/core/utils/error/failure.dart';
 import 'package:watch_movies/movies/domin/entities/moive.dart';
 
 abstract class BaseMovieRepository {
-  Future<List<Moive>> getNowPlaying();
+  Future<Either<Failure, List<Movie>>> getNowPlayingMovies();
 
-  Future<List<Moive>> getPopularMovies();
+  Future<Either<Failure, List<Movie>>> getPopularMovies();
 
-  Future<List<Moive>> getTopRatedMoives();
+  Future<Either<Failure, List<Movie>>> getTopRatedMovies();
 }
