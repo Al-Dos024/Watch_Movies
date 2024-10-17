@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:watch_movies/core/utils/error/exceptions.dart';
-import 'package:watch_movies/core/utils/error/failure.dart';
+import 'package:watch_movies/core/error/exceptions.dart';
+import 'package:watch_movies/core/error/failure.dart';
 import 'package:watch_movies/movies/data/datasource/movie_remote_datasource.dart';
 import 'package:watch_movies/movies/domin/entities/moive.dart';
 import 'package:watch_movies/movies/domin/repository/base_movie_repository.dart';

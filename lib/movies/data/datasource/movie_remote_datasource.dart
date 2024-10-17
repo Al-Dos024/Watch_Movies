@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:watch_movies/core/utils/error/exceptions.dart';
-import 'package:watch_movies/core/utils/network/api_constance.dart';
-import 'package:watch_movies/core/utils/network/error_message_model.dart';
+import 'package:watch_movies/core/error/exceptions.dart';
+import 'package:watch_movies/core/network/api_constance.dart';
+import 'package:watch_movies/core/network/error_message_model.dart';
+
 import 'package:watch_movies/movies/data/models/moive_model.dart';
 
 abstract class BaseMovieRemoteDataSource {
