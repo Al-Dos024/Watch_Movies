@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:watch_movies/core/error/exceptions.dart';
 import 'package:watch_movies/core/network/api_constance.dart';
-import 'package:watch_movies/core/network/error_message_model.dart';
-
 import 'package:watch_movies/movies/data/models/moive_model.dart';
+
+import '../../../core/network/error_message_model.dart';
 
 abstract class BaseMovieRemoteDataSource {
   Future<List<MovieModel>> getNowPlayingMovies();

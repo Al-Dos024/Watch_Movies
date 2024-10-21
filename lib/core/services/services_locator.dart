@@ -1,3 +1,4 @@
+import 'package:get_it/get_it.dart';
 import 'package:watch_movies/movies/data/datasource/movie_remote_datasource.dart';
 import 'package:watch_movies/movies/data/repository/movies_repository.dart';
 import 'package:watch_movies/movies/domin/repository/base_movie_repository.dart';
@@ -5,7 +6,6 @@ import 'package:watch_movies/movies/domin/usecases/get_now_playing_movie_usecase
 import 'package:watch_movies/movies/domin/usecases/get_popular_movie_usecase.dart';
 import 'package:watch_movies/movies/domin/usecases/get_top_rated_movie_usecase.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_bloc.dart';
-import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
 
