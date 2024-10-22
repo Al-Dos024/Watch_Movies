@@ -1,4 +1,4 @@
-import 'package:watch_movies/movies/domin/entities/moive.dart';
+import 'package:watch_movies/movies/domain/entities/movie.dart';
 
 List<Movie> moviesList = [
   const Movie(

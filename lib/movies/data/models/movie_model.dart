@@ -1,4 +1,4 @@
-import 'package:watch_movies/movies/domin/entities/moive.dart';
+import 'package:watch_movies/movies/domain/entities/movie.dart';
 
 class MovieModel extends Movie {
   const MovieModel({
