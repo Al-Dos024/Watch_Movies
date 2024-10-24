@@ -3,7 +3,11 @@ import 'package:watch_movies/core/error/exceptions.dart';
 import 'package:watch_movies/core/error/failure.dart';
 import 'package:watch_movies/movies/data/datasource/movie_remote_data_source.dart';
 import 'package:watch_movies/movies/domain/entities/movie.dart';
+import 'package:watch_movies/movies/domain/entities/movie_detail.dart';
+import 'package:watch_movies/movies/domain/entities/recommendation.dart';
 import 'package:watch_movies/movies/domain/repository/base_movies_repository.dart';
+import 'package:watch_movies/movies/domain/usecases/get_movie_details_usecase.dart';
+import 'package:watch_movies/movies/domain/usecases/get_recommendation_usecase.dart';
 
 class MoviesRepository extends BaseMoviesRepository {
   final BaseMovieRemoteDataSource baseMovieRemoteDataSource;
@@ -33,6 +37,29 @@ class MoviesRepository extends BaseMoviesRepository {
   @override
   Future<Either<Failure, List<Movie>>> getTopRatedMovies() async {
     final result = await baseMovieRemoteDataSource.getTopRatedMovies();
+    try {
+      return Right(result);
+    } on ServerException catch (failure) {
+      return Left(ServerFailure(failure.errorMessageModel.statusMessage));
+    }
+  }
+
+  @override
+  Future<Either<Failure, MovieDetail>> getMovieDetails(
+      MovieDetailsParameters parameters) async {
+    final result = await baseMovieRemoteDataSource.getMovieDetails(parameters);
+    try {
+      return Right(result);
+    } on ServerException catch (failure) {
+      return Left(ServerFailure(failure.errorMessageModel.statusMessage));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Recommendation>>> getRecommendation(
+      RecommendationParameters parameters) async {
+    final result =
+        await baseMovieRemoteDataSource.getRecommendation(parameters);
     try {
       return Right(result);
     } on ServerException catch (failure) {
