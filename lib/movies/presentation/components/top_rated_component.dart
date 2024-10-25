@@ -7,9 +7,10 @@ import 'package:watch_movies/core/network/api_constance.dart';
 import 'package:watch_movies/core/utils/enums.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_bloc.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_state.dart';
+import 'package:watch_movies/movies/presentation/screens/movie_detail_screen.dart';
 
 class TopRatedComponent extends StatelessWidget {
-  const TopRatedComponent({Key? key}) : super(key: key);
+  const TopRatedComponent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,12 @@ class TopRatedComponent extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 8.0),
                         child: InkWell(
                           onTap: () {
-                            /// TODO : NAVIGATE TO  MOVIE DETAILS
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      MovieDetailScreen(id: movie.id),
+                                ));
                           },
                           child: ClipRRect(
                             borderRadius:

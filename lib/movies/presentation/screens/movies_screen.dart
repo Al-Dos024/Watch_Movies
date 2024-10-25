@@ -11,7 +11,7 @@ import 'package:watch_movies/movies/presentation/controller/movies_event.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_state.dart';
 
 class MoviesScreen extends StatelessWidget {
-  const MoviesScreen({Key? key}) : super(key: key);
+  const MoviesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +44,11 @@ class MoviesScreen extends StatelessWidget {
                           ),
                         ),
                         InkWell(
-                          onTap: () {
-                            /// TODO : NAVIGATION TO POPULAR SCREEN
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          onTap: () {},
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
-                              children: const [
+                              children: [
                                 Text(
                                   AppString.seeMore,
                                   style: TextStyle(
@@ -90,13 +88,11 @@ class MoviesScreen extends StatelessWidget {
                           ),
                         ),
                         InkWell(
-                          onTap: () {
-                            /// TODO : NAVIGATION TO Top Rated Movies Screen
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          onTap: () {},
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
-                              children: const [
+                              children: [
                                 Text(
                                   AppString.seeMore,
                                   style: TextStyle(

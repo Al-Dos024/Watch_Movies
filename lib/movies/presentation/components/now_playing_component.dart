@@ -7,9 +7,10 @@ import 'package:watch_movies/core/network/api_constance.dart';
 import 'package:watch_movies/core/utils/enums.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_bloc.dart';
 import 'package:watch_movies/movies/presentation/controller/movies_state.dart';
+import 'package:watch_movies/movies/presentation/screens/movie_detail_screen.dart';
 
 class NowPlayingComponent extends StatelessWidget {
-  const NowPlayingComponent({Key? key}) : super(key: key);
+  const NowPlayingComponent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,14 @@ class NowPlayingComponent extends StatelessWidget {
                     (item) {
                       return GestureDetector(
                         key: const Key('openMovieMinimalDetail'),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    MovieDetailScreen(id: item.id),
+                              ));
+                        },
                         child: Stack(
                           children: [
                             ShaderMask(
